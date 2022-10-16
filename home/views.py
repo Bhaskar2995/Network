@@ -6,4 +6,3 @@ class Home(View):
         return render(request,'home.html')
 
 
-# Create your views here.

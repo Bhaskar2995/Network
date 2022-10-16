@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block additional_css %}
+<style>
+     .card-header-color{
+        background-color:#2262CB;
+    }
+   
+</style>
+   
+{% endblock %} 
+
+{% block content %}
+<!-- <div class="container mx-5">
+    <form  method="post" action="">
+        {% csrf_token %}
+        <div class="card mt-5" style="width: 18rem;">
+            <div class="card-header border border-primary">
+                Sign Up
+            </div>
+            <div class="card-body">
+                <div class="input-group flex-nowrap">
+                    <input type="text" class="form-control" placeholder="email" name ="email" aria-describedby="addon-wrapping"> 
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <input type="password" class="form-control" placeholder="Password" name ="password" aria-describedby="addon-wrapping">
+                </div><br>
+                <div class="input-group flex-nowrap">
+                    <input type="password" class="form-control" placeholder="Confirm Password" name ="confirm_password" aria-describedby="addon-wrapping">
+                </div><br>
+                <input type="submit" value="Sign Up" class="btn btn-primary w-100">
+                <hr>
+                
+            </div> 
+        </div>
+    </form> <br>
+</div>  -->
+ 
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-3 mx-auto mt-5">
+                <h1 class="text-center mb-4">Network</h1>
+                <form  method="post" action="">
+                    {% csrf_token %}
+                    <div class="card text-center">
+                        <div class="card-header card-header-color text-white">
+                            Sign Up
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" name="email" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
+                              </div>
+                              <div class="mb-3">
+                                <input type="password" class="form-control" name="password" placeholder="Password">
+                              </div>
+                              <div class="mb-3">
+                                <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password">
+                              </div>
+                              <input type="submit" value="Sign Up" class="btn card-header-color w-100 text-white">
+                        </div>
+                        
+                    </div>
+                </form>
+               
+            </div>
+        </div>
+    </div> 
+   
+    
+
+{% endblock %}
