@@ -1,5 +1,6 @@
 from operator import mod
 from re import T
+from unittest.util import _MAX_LENGTH
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser,PermissionsMixin,BaseUserManager
 
@@ -55,3 +56,18 @@ class User(AbstractBaseUser,PermissionsMixin):
     class Meta:
         verbose_name = 'User'
         verbose_name_plural = 'Users'
+
+class UserInfo(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    profile_pic = models.ImageField(upload_to='cars')
+    dob = models.DateField()
+    age = models.IntegerField()
+
+class Restaurant(models.Model):
+    city = models.CharField(max_length=50)
+    Area = models.CharField(max_length=50)
+
+class Person(models.Model):
+    Restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    name = models.CharField(max_length=50)
+

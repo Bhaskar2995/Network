@@ -42,4 +42,8 @@ class RegisterView(View):
         user.save()
         return redirect('/')
 
+class ProfileView(View):
+    def get(self,request,*args,**kwargs):
+        return render(request,'profile.html')
+
 
